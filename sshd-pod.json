@@ -1,0 +1,21 @@
+{
+    "kind": "Pod",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "nginx-service",
+        "labels": {
+             "user": "service-nginx",
+             "name": "client-sshd"
+         }
+    },
+    "spec":{
+        "containers":[{
+            "name": "client-containre",
+            "image": "k8stest/sshd:test",
+            "ports": [{
+                 "containerPort": 22,
+                 "hostPort": 1314
+             }]
+     }]
+    }
+}
